@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HZKdx/Pe98aIm+f7g0iIYCzA41DXzeXeOCrGQz3en3yt3YFtIvFVWZf0UlgiyIZRrtYxg9BJs7CBqG4UIQ410Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\shres\\source\\repos\\ASP.NETmvc\\ASP.NETmvc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shres\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
