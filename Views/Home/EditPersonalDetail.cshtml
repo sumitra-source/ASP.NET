@@ -1,51 +1,64 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
-@{
-    ViewData["Title"] = "EditPersonalDetail";
-}
-
-<h1>EditPersonalDetail</h1>
-
-
-@model PersonalDetail
-@{ ViewData["Title"] = "PersonalDetail"; }
-
-<h2>Here is @Html.DisplayFor(x => Model.FirstName)'s details</h2>
-
-@Html.ActionLink("Back to Persons", "Persons", "Home", null, new { @class = "btn btn-secondary" })
-
-@using (Html.BeginForm("EditPersonalDetail", "Home", FormMethod.Post))
+namespace ASP.NETmvc.Models
 {
-    @Html.HiddenFor(x => Model.PersonalDetailId)
-    <table border="1" class="table table-bordered">
-        <tr>
-            <th>Particular</th>
-            <th>Details</th>
-        </tr>
-        <tr>
-            <td>@Html.DisplayNameFor(x => x.FirstName)</td>
-            <td>@Html.TextBoxFor(x => Model.FirstName)</td>
-        </tr>
-        <tr>
-            <td>@Html.DisplayNameFor(x => x.Address)</td>
-            <td>@Html.TextBoxFor(x => Model.Address)</td>
-        </tr>
-        <tr>
-            <td>@Html.DisplayNameFor(x => x.Age)</td>
-            <td>@Html.TextBoxFor(x => Model.Age)</td>
-        </tr>
-        <tr>
-            <td>@Html.DisplayNameFor(x => x.Occupation)</td>
-            <td>@Html.TextBoxFor(x => Model.Occupation)</td>
-        </tr>
+    public class PersonalDetail
+    {
+        public PersonalDetail()
+        {
+        }
 
-    </table>
+        // properties
+        public int PersonalDetailId { get; set; }
 
-    <button type="submit" class="btn btn-primary btn-block">Update</button>
+        [Required(ErrorMessage = "Name is required property")]
+        [DisplayName("Full Name *")]
+        public string FirstName { get; set; }
+
+        public string Address { get; set; }
+
+        [Required(ErrorMessage = "Age is required")]
+        [Range(18, 30, ErrorMessage = "Age must be between 18 and 30")]
+        [DisplayName("Age *")]
+        public int Age { get; set; }
+
+        public string Occupation { get; set; }
+
+    }
+
+    /* public class DoctorProfile : PersonalDetail
+    {
+        public DoctorProfile(List<PersonalDetail> persons) : base(persons)
+        {
+        }
+        public string Qualification { get; set; }
+        public string HospitalClinic { get; set; }
+        public string Speciality { get; set; }
+    }
+    public class TeacherProfile : PersonalDetail
+    {
+        public TeacherProfile(List<PersonalDetail> persons) : base(persons)
+        {
+        }
+        public string Qualification { get; set; }
+        public string College { get; set; }
+        public string AssociatedSubjects { get; set; }
+    }
+    public class StudentProfile : PersonalDetail
+    {
+        public StudentProfile(List<PersonalDetail> persons) : base(persons)
+        {
+        }
+        public string Faculty { get; set; }
+        public string College_School { get; set; }
+        public string Rollno { get; set; }
+    } */
+
 
 
 }

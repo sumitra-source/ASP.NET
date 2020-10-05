@@ -73,14 +73,22 @@ namespace ASP.NETmvc.Controllers
         [HttpPost]
         public IActionResult EditPersonalDetail(PersonalDetail personDetail)
         {
-            var personInList = PersonMemory.GetPersons().Where(x => x.PersonalDetailId == personDetail.PersonalDetailId).FirstOrDefault();
+            if (ModelState.IsValid)
+            {
 
-            personInList.FirstName = personDetail.FirstName;
-            personInList.Occupation = personDetail.Occupation;
-            personInList.Age = personDetail.Age;
-            personInList.Address = personDetail.Address;
+                var personInList = PersonMemory.GetPersons().Where(x => x.PersonalDetailId == personDetail.PersonalDetailId).FirstOrDefault();
 
-            return RedirectToAction("Persons");
+                personInList.FirstName = personDetail.FirstName;
+                personInList.Occupation = personDetail.Occupation;
+                personInList.Age = personDetail.Age;
+                personInList.Address = personDetail.Address;
+
+                return RedirectToAction("Persons");
+            }
+            else
+            {
+                return View(personDetail);
+            }
         }
 
         public IActionResult CreatePerson()
@@ -110,6 +118,22 @@ namespace ASP.NETmvc.Controllers
             return RedirectToAction("Persons");
         }
 
+        public ActionResult Contact()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult form1(int txtName, string txtEmail, string chkComment)
+        {
+            ViewBag.Name = txtName;
+            ViewBag.Email = txtEmail;
+            if (chkComment != null)
+                ViewBag.Comment = "Selected";
+            else
+                ViewBag.Comment = "Not Selected";
+
+            return View("Index");
+        }
 
     }
 }
