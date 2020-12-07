@@ -5333,11 +5333,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shres\\source\\repos\\Database\\Database\\Database.csproj",
+      "projectUniqueName": "C:\\Users\\shres\\Desktop\\ASP.NET\\Database\\Database\\Database.csproj",
       "projectName": "Database",
-      "projectPath": "C:\\Users\\shres\\source\\repos\\Database\\Database\\Database.csproj",
+      "projectPath": "C:\\Users\\shres\\Desktop\\ASP.NET\\Database\\Database\\Database.csproj",
       "packagesPath": "C:\\Users\\shres\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shres\\source\\repos\\Database\\Database\\obj\\",
+      "outputPath": "C:\\Users\\shres\\Desktop\\ASP.NET\\Database\\Database\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shres\\AppData\\Roaming\\NuGet\\NuGet.Config",

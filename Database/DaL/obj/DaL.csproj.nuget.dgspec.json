@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shres\\source\\repos\\Database\\DaL\\DaL.csproj": {}
+    "C:\\Users\\shres\\Desktop\\ASP.NET\\Database\\DaL\\DaL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shres\\source\\repos\\Database\\DaL\\DaL.csproj": {
+    "C:\\Users\\shres\\Desktop\\ASP.NET\\Database\\DaL\\DaL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shres\\source\\repos\\Database\\DaL\\DaL.csproj",
+        "projectUniqueName": "C:\\Users\\shres\\Desktop\\ASP.NET\\Database\\DaL\\DaL.csproj",
         "projectName": "DaL",
-        "projectPath": "C:\\Users\\shres\\source\\repos\\Database\\DaL\\DaL.csproj",
+        "projectPath": "C:\\Users\\shres\\Desktop\\ASP.NET\\Database\\DaL\\DaL.csproj",
         "packagesPath": "C:\\Users\\shres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shres\\source\\repos\\Database\\DaL\\obj\\",
+        "outputPath": "C:\\Users\\shres\\Desktop\\ASP.NET\\Database\\DaL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
