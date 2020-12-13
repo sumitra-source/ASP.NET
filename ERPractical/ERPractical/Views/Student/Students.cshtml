@@ -1,7 +1,8 @@
-﻿@model IEnumerable<ERPractical.Student>
+﻿@model IEnumerable<StudentModel>
 
 @{
     ViewData["Title"] = "Students";
+    int studentCounter = 1;
 }
 
 <h1>Students</h1>
@@ -13,7 +14,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.StudentId)
+                SN
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.StudentName)
@@ -34,7 +35,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.StudentId)
+                @studentCounter
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.StudentName)
@@ -49,11 +50,12 @@
                 @Html.DisplayFor(modelItem => item.ContactNumber)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { studentId=item.StudentId }) |
+                @Html.ActionLink("Details", "Details", new { studentId = item.StudentId }) |
+                @Html.ActionLink("Delete", "Delete", new {studentid=item.StudentId})
             </td>
         </tr>
+        studentCounter++;
 }
     </tbody>
 </table>

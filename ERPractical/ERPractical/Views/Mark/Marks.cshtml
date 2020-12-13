@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MarkModel>
+
+@{
+    ViewData["Title"] = "Marks";
+
+}
+
+<h1>MarkIndex</h1>
+
+<p>
+    <a asp-action="Creates">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MarkId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubjectId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Obtainedmark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
+          
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarkId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Obtainedmark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
+          
+            <td>
+                @Html.ActionLink("Edits", "Edits", new { markId = item.MarkId }) |
+                @Html.ActionLink("Marks_Details", "Marks_Details", new { markId = item.MarkId }) |
+                @Html.ActionLink("Deletes", "Deletes", new { markId = item.MarkId  })
+            </td>
+        </tr>
+    
+}
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+﻿@model ERPractical.Models.MarkModel
+
+@{
+    ViewData["Title"] = "Marks_Details";
+}
+
+<h1>Marks_Details</h1>
+
+<div>
+    <h4>MarkModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MarkId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MarkId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SubjectId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SubjectId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Obtainedmark)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Obtainedmark)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StudentId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Marks">Back to List</a>
+</div>

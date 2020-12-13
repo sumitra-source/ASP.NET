@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ERPractical
 {
     [Table("Student", Schema = "dbo")]
-    public class Student
+    public partial class Student
     {
        
         public int StudentId { get; set; }
@@ -17,5 +17,16 @@ namespace ERPractical
         public string Address { get; set; }
         public string Batch { get; set; }
         public string ContactNumber { get; set; }
+    }
+    [Table("Mark", Schema = "dbo")]
+    public partial class Mark
+    {
+
+        public int MarkId { get; set; }
+        public int SubjectId { get; set; }
+
+        public decimal Obtainedmark { get; set; }
+        public int StudentId { get; set; }
+       
     }
 }
