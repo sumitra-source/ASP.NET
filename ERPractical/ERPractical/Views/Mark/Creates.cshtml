@@ -19,7 +19,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="SubjectId" class="control-label"></label>
-                <input asp-for="SubjectId" class="form-control" />
+
+                @Html.DropDownListFor(x => x.SubjectId, ViewBag.Subjects as SelectList, "--Select S--", new { @class = "form-control" })
+                @*<input asp-for="SubjectId" class="form-control" />*@
                 <span asp-validation-for="SubjectId" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -29,7 +31,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="StudentId" class="control-label"></label>
-                <input asp-for="StudentId" class="form-control" />
+                @* <input asp-for="StudentId" class="form-control" />*@
+                @Html.DropDownListFor(x=>x.StudentId,ViewBag.Students as SelectList,"--Select Student--", new { @class="form-control"})
                 <span asp-validation-for="StudentId" class="text-danger"></span>
             </div>
             <div class="form-group">

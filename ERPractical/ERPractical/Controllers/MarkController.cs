@@ -1,5 +1,6 @@
 ﻿using ERPractical.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,12 +22,12 @@ namespace ERPractical.Controllers
             MarkModel mark = context.Marks.Where(x => x.MarkId == markId).Select(x => new MarkModel()
             {
                 MarkId = x.MarkId,
-              StudentId = x.StudentId,
+                StudentId = x.StudentId,
 
-               SubjectId = x.SubjectId,
-               Obtainedmark=x.Obtainedmark
+                SubjectId = x.SubjectId,
+                Obtainedmark = x.Obtainedmark
 
-              
+
 
             }).FirstOrDefault();
             return View(mark);
@@ -43,7 +44,21 @@ namespace ERPractical.Controllers
         }
         public IActionResult Creates()
         {
+            var Students = context.Students.Select(student => new StudentModel
+            {
+                StudentId = student.StudentId,
+                StudentName = student.StudentName,
+                Batch = student.Batch,
+                ContactNumber = student.ContactNumber
+            }).ToList();
+            ViewBag.Students = new SelectList(Students, "StudentId", "StudentName");
 
+            var Subjects = context.Subjects.Select(x => new SubjectModel
+            {
+                SubjectId = x.SubjectId,
+                SubjectName = x.SubjectName
+            }).ToList();
+            ViewBag.Subjects = new SelectList(Subjects, "SubjectId", "SubjectName");
             return View(new MarkModel());
         }
 
@@ -57,7 +72,7 @@ namespace ERPractical.Controllers
             markRow.Obtainedmark = mark.Obtainedmark;
 
             markRow.SubjectId = mark.SubjectId;
-            
+
 
             context.Marks.Add(markRow);
             context.SaveChanges();
@@ -65,6 +80,7 @@ namespace ERPractical.Controllers
         }
         public IActionResult Marks_Details(int markId)
         {
+
             MarkModel mark = context.Marks.Where(x => x.MarkId == markId).Select(x => new MarkModel()
             {
                 MarkId = x.MarkId,
@@ -79,6 +95,23 @@ namespace ERPractical.Controllers
         }
         public IActionResult Edits(int markId)
         {
+
+            var Students = context.Students.Select(student => new StudentModel
+            {
+                StudentId = student.StudentId,
+                StudentName = student.StudentName,
+                Batch = student.Batch,
+                ContactNumber = student.ContactNumber
+            }).ToList();
+            ViewBag.Students = new SelectList(Students, "StudentId", "StudentName");
+
+            var Subjects = context.Subjects.Select(x => new SubjectModel
+            {
+                SubjectId = x.SubjectId,
+                SubjectName = x.SubjectName
+            }).ToList();
+            ViewBag.Subjects = new SelectList(Subjects, "SubjectId", "SubjectName");
+
             MarkModel mark = context.Marks.Where(x => x.MarkId == markId).Select(x => new MarkModel()
             {
                 MarkId = x.MarkId,
@@ -86,8 +119,8 @@ namespace ERPractical.Controllers
 
                 Obtainedmark = x.Obtainedmark,
 
-                SubjectId= x.SubjectId,
-              
+                SubjectId = x.SubjectId,
+
 
             }).FirstOrDefault();
             return View(mark);
@@ -103,7 +136,7 @@ namespace ERPractical.Controllers
             markRow.Obtainedmark = mark.Obtainedmark;
 
 
-           
+
             context.Marks.Attach(markRow);
             context.Entry(markRow).State = EntityState.Modified;
             context.SaveChanges();
@@ -112,19 +145,22 @@ namespace ERPractical.Controllers
         public IActionResult Marks()
 
         {
-            List<MarkModel> marks = context.Marks.Select(marks => new MarkModel()
-            {
-                MarkId = marks.MarkId,
-                StudentId = marks.StudentId,
+            List<MarkModel> marks = (from M in context.Marks
+                                     join S in context.Students on M.StudentId equals S.StudentId
+                                     join Su in context.Subjects on M.SubjectId equals Su.SubjectId
+                                     select new MarkModel()
+                                     {
+                                         MarkId = M.MarkId,
+                                         StudentId = M.StudentId,
+                                         StudentName = S.StudentName,
+                                         SubjectName = Su.SubjectName,
 
-                Obtainedmark = marks.Obtainedmark,
+                                         Obtainedmark = M.Obtainedmark,
 
-                SubjectId = marks.SubjectId
+                                         SubjectId = M.SubjectId
 
 
-            }
-            )
-                .ToList();
+                                     }).ToList();
             return View(marks);
 
         }

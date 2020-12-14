@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ERPractical.Models.SubjectModel>
+
+@{
+    ViewData["Title"] = "Subjects";
+    int subjectCounter = 1;
+}
+
+<h1>Subjects</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                SN
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubjectName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @subjectCounter
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { subjectId = item.SubjectId }) |
+                @Html.ActionLink("Details", "Details", new { subjectId = item.SubjectId }) |
+                @Html.ActionLink("Delete", "Delete", new { subjectId = item.SubjectId })
+            </td>
+        </tr>
+    subjectCounter++;
+}
+    </tbody>
+</table>

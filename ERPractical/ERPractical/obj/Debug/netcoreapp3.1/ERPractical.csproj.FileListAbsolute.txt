@@ -337,3 +337,8 @@ C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\R
 C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Mark\Creates.cshtml.g.cs
 C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Mark\Edits.cshtml.g.cs
 C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Mark\Deletes.cshtml.g.cs
+C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Subject\Subjects.cshtml.g.cs
+C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Subject\Create.cshtml.g.cs
+C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Subject\Details.cshtml.g.cs
+C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Subject\Delete.cshtml.g.cs
+C:\Users\shres\Desktop\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Subject\Edit.cshtml.g.cs
