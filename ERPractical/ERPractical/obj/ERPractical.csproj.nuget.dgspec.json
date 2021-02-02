@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shres\\Desktop\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj": {}
+    "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shres\\Desktop\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj": {
+    "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shres\\Desktop\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj",
+        "projectUniqueName": "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj",
         "projectName": "ERPractical",
-        "projectPath": "C:\\Users\\shres\\Desktop\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj",
+        "projectPath": "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj",
         "packagesPath": "C:\\Users\\shres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shres\\Desktop\\ASP.NET\\ERPractical\\ERPractical\\obj\\",
+        "outputPath": "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shres\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,16 +71,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.10, 3.1.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -89,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

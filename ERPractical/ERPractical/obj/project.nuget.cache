@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KV1z1wa/09/nY8VW45XYT0TGIj/dmASyQ02zSR5FrjfuCFJwGsrmF+LMgqtkAhP306BNUHhnEj+iGtRvMY/H4A==",
+  "dgSpecHash": "TTA0tUZwSETgRvza5cDPq6LgsIq6p5ettv0y7pYsSqNzZ5lYkSV+lWWh5nhH07Ydrlw/ICGN3jClVJdmW+fu7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shres\\Desktop\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj",
+  "projectFilePath": "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shres\\.nuget\\packages\\documentformat.openxml\\2.11.3\\documentformat.openxml.2.11.3.nupkg.sha512",
     "C:\\Users\\shres\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
@@ -168,9 +168,7 @@
     "C:\\Users\\shres\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\shres\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\shres\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\shres\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\shres\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\shres\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+    "C:\\Users\\shres\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": [
     {
