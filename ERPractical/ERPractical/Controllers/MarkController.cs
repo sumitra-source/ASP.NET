@@ -11,8 +11,8 @@ namespace ERPractical.Controllers
 {
     public class MarkController : Controller
     {
-        private ERPracticalDB context;
-        public MarkController(ERPracticalDB _context)
+        private ERTutorialDB context;
+        public MarkController(ERTutorialDB _context)
         {
             context = _context;
         }
@@ -161,6 +161,12 @@ namespace ERPractical.Controllers
 
 
                                      }).ToList();
+            return View(marks);
+
+        }
+        public IActionResult StudentMarks(int studentId)
+        {
+            List<MarksModel> marks = context.MarksModel.FromSqlRaw("SpGetStudentMarks"+ studentId.ToString()).ToList();
             return View(marks);
 
         }

@@ -25,7 +25,7 @@ namespace ERPractical
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContextPool<ERPracticalDB>(options => options.UseSqlServer("Data Source=DESKTOP-6P6C4JH;database=EFTutorialDB;Integrated Security=True"));
+            services.AddDbContextPool<ERTutorialDB>(options => options.UseSqlServer("Data Source=DESKTOP-6P6C4JH;database=EFTutorialDB;Integrated Security=SSPI"));
             services.AddControllersWithViews();
         }
 

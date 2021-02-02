@@ -521,3 +521,4 @@ C:\Users\shres\Source\Repos\sumitra-source\ASP.NET\ERPractical\ERPractical\obj\D
 C:\Users\shres\Source\Repos\sumitra-source\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\ERPractical.dll
 C:\Users\shres\Source\Repos\sumitra-source\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\ERPractical.pdb
 C:\Users\shres\Source\Repos\sumitra-source\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\ERPractical.genruntimeconfig.cache
+C:\Users\shres\Source\Repos\sumitra-source\ASP.NET\ERPractical\ERPractical\obj\Debug\netcoreapp3.1\Razor\Views\Mark\StudentMarks.cshtml.g.cs

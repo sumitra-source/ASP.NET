@@ -12,8 +12,8 @@ namespace ERPractical.Controllers
 {
     public class StudentController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private ERPracticalDB context;
-        public StudentController(ERPracticalDB _context)
+        private ERTutorialDB context;
+        public StudentController(ERTutorialDB _context)
         {
             context = _context;
         }
@@ -140,5 +140,6 @@ namespace ERPractical.Controllers
 
 
         }
+
     }
 }

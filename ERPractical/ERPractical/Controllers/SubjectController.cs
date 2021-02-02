@@ -10,8 +10,8 @@ namespace ERPractical.Controllers
 {
     public class SubjectController : Controller
     {
-        private ERPracticalDB context;
-        public SubjectController(ERPracticalDB _context)
+        private ERTutorialDB context;
+        public SubjectController(ERTutorialDB _context)
         {
             context = _context;
         }

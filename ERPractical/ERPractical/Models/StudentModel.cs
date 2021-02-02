@@ -30,6 +30,20 @@ namespace ERPractical.Models
         public int StudentId { get; set; }
 
     }
+    public class MarksModel
+    {
+
+        public int MarkId { get; set; }
+        public int SubjectId { get; set; }
+        [DisplayName("Student Name")]
+        public string StudentName { get; set; }
+        [DisplayName("Subject")]
+        public string SubjectName { get; set; }
+
+        public decimal Obtainedmark { get; set; }
+        public int StudentId { get; set; }
+
+    }
     public class SubjectModel
     {
 

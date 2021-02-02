@@ -50,9 +50,10 @@
                 @Html.DisplayFor(modelItem => item.ContactNumber)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { studentId=item.StudentId }) |
+                @Html.ActionLink("Edit", "Edit", new { studentId = item.StudentId }) |
                 @Html.ActionLink("Details", "Details", new { studentId = item.StudentId }) |
-                @Html.ActionLink("Delete", "Delete", new {studentid=item.StudentId})
+                @Html.ActionLink("Delete", "Delete", new { studentId = item.StudentId })|
+                @Html.ActionLink("Marks", "StudentMarks","Mark", new { studentId = item.StudentId })
             </td>
         </tr>
         studentCounter++;
