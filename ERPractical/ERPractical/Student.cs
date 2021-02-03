@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.CustomXmlSchemaReferences;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -36,6 +37,20 @@ namespace ERPractical
 
         public int SubjectId { get; set; }
         public string SubjectName { get; set; }
+    }
+    public class MarksModels
+    {
+
+        public int MarkId { get; set; }
+        public int SubjectId { get; set; }
+        [DisplayName("Student Name")]
+        public string StudentName { get; set; }
+        [DisplayName("Subject")]
+        public string SubjectName { get; set; }
+
+        public decimal Obtainedmark { get; set; }
+        public int StudentId { get; set; }
+
     }
 
 }

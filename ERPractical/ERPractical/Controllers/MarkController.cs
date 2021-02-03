@@ -164,9 +164,10 @@ namespace ERPractical.Controllers
             return View(marks);
 
         }
-        public IActionResult StudentMarks(int studentId)
+        public IActionResult StudentMarks(int StudentId)
         {
-            List<MarksModel> marks = context.MarksModel.FromSqlRaw("SpGetStudentMarks"+ studentId.ToString()).ToList();
+           string stdId = StudentId.ToString();
+            List<MarksModels> marks = context.MarksModels.FromSqlRaw("SpGetStudentMarks "+ StudentId.ToString()).ToList();
             return View(marks);
 
         }

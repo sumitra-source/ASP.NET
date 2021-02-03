@@ -1,47 +1,69 @@
-﻿@model IEnumerable<ERPractical.Models.MarksModel>
+﻿@model IEnumerable<ERPractical.MarksModels>
 
 @{
     ViewData["Title"] = "StudentMarks";
-    int count = 1;
+    int marksCounter = 1;
 }
-</p>
-<table class="table">
-    <h3 style="text-align:center;">Bhaktapur Multiple Campus</h3>
-    <h5 style="text-align:center;">Dudhpati,Bhaktapur</h5>
-    <h4 style="text-align:center;">Marrksheet</h4>
-    
-    <thead>
-        <tr>
 
-            <th>
-               Name: @Model.ToList()[0].StudentName
-            </th>
-            
-         <th>
-             Roll No:@Model.ToList()[0].StudentId
-         </th>
-        </tr>
-        <tr>
-            <th>SN</th>
-            <th>Subject</th>
-            <th>Marks</th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-         <td>@count</td>
-          
-            <td>
-                @Html.DisplayFor(modelItem => item.SubjectName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Obtainedmark)
-            </td>
-          
-          
-        </tr>
-    count++;
+<h1>StudentMarks</h1>
+@if (Model.ToList().Count > 0)
+{
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="4" class="text-center">Marks Sheet of @Model.ToList()[0].StudentName</th>
+            </tr>
+            <tr>
+                <th>
+
+                    S.N
+                </th>
+
+
+
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Obtainedmark)
+                </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @marksCounter
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubjectName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Obtainedmark)
+                    </td>
+
+
+                </tr>
+                marksCounter++;
+            }
+            <tr style="font-weight:bold">
+                <td colspan="3" class="text-right"> Total</td>
+                <td>
+                    @Model.Sum(x => x.Obtainedmark);
+                </td>
+            </tr>
+        </tbody>
+    </table>
 }
-    </tbody>
-</table>
+else
+{
+    <p>
+        No Result found!!!
+    </p>
+}

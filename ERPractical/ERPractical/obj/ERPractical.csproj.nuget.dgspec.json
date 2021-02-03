@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj": {}
+    "C:\\Users\\shres\\Desktop\\ASP.NET-master\\ASP.NET-master\\ERPractical\\ERPractical\\ERPractical.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj": {
+    "C:\\Users\\shres\\Desktop\\ASP.NET-master\\ASP.NET-master\\ERPractical\\ERPractical\\ERPractical.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj",
+        "projectUniqueName": "C:\\Users\\shres\\Desktop\\ASP.NET-master\\ASP.NET-master\\ERPractical\\ERPractical\\ERPractical.csproj",
         "projectName": "ERPractical",
-        "projectPath": "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\ERPractical.csproj",
+        "projectPath": "C:\\Users\\shres\\Desktop\\ASP.NET-master\\ASP.NET-master\\ERPractical\\ERPractical\\ERPractical.csproj",
         "packagesPath": "C:\\Users\\shres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shres\\Source\\Repos\\sumitra-source\\ASP.NET\\ERPractical\\ERPractical\\obj\\",
+        "outputPath": "C:\\Users\\shres\\Desktop\\ASP.NET-master\\ASP.NET-master\\ERPractical\\ERPractical\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shres\\AppData\\Roaming\\NuGet\\NuGet.Config",
